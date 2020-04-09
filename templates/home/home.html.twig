@@ -3,6 +3,12 @@
 {% block body %}
     <div>
         <h1>{{ test }}</h1>
+        <ul>
+            {% for u in user %}
+                <li>nom : {{ u.name }} age : {{ u.age }}</li>
+            {% endfor %}
+        </ul>
+        
     </div>
 {% endblock %}
 
