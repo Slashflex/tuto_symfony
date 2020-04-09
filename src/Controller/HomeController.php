@@ -13,6 +13,17 @@ class HomeController extends AbstractController
      */
     public function index() :Response
     {
-        return $this->render('home/home.html.twig');
+        $user = [
+            'user1' => 'david',
+            'user2' => 'arnaud',
+            'user3' => 'quentin'
+        ];
+
+        $test = 'un message de test';
+
+        return $this->render('home/home.html.twig', [
+            'user' => $user,
+            'test' => $test
+        ]);
     }
 }
