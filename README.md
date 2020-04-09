@@ -1,4 +1,3 @@
-# tuto_symfony
 <h1 style="text-align: center">
     Composer required packages :
 </h1>
@@ -10,6 +9,11 @@
 | :-------------------: | :----------------: | :-------------------------------------------: | :----------------------------------------------: |
 | composer req profiler | composer req twig  |               composer req make               |                 composer req orm                 |
 |       debugger        | moteur de template | creation de controller, tests, classes etc... | authorize la migration, création de tables etc.. |
+
+```sh
+# Créer un controller 
+bin/console make:controller # puis suivre les instructions (première lettre en majuscule)
+```
 
 
 
@@ -33,4 +37,12 @@ bin/console make:migration
 ```sh
 # Créé la table Article
 bin/console doctrine:migration:migrate
+```
+
+***
+
+### Générer un CRUD rapide
+
+```sh
+bin/console make:crud Article # veiller à ne pas avoir de controller du même nom
 ```
