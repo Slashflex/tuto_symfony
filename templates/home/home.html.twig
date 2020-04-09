@@ -1,25 +1,35 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
+
+
+
+{% block title %}Home site test symfony{% endblock %}
 
 {% block body %}
-    <div>
-        <h1>{{ test }}</h1>
-        <ul>
-            {% for u in user %}
-                <li>nom : {{ u.name }} age : {{ u.age }}</li>
-            {% endfor %}
-        </ul>
+    <div class="container">
+        <div class="jumbotron mt-3">
+            <h1 class="display-3">Bienvenue sur votre premier site symfony !</h1>
+            <p class="lead">Ceci est la page d'accueil</p>
+            <hr class="my-4">
+            <p>Un message de test histoire de mettre quelque chose ici</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">un bouton</a>
+            </p>
+        </div>
+
+        <div class="row">
+            <h1>LE NOM DE LA ROUTE EST {{ path('home') }}</h1>
+            <div>
+                <h1>{{ test }}</h1>
+                <ul>
+                    {% for u in user %}
+                        <li>nom : {{ u.name }} & age : {{ u.age }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            
+        </div>
     </div>
-    <h1>Le nom de la route est {{ path('home') }}</h1>
 {% endblock %}
-
-
-{% block toto %}
-    <h1>block toto</h1>
-{% endblock %}
-
-{% block javascripts %}
-    <script>
-        console.log('hello world');
-    </script>
-{% endblock %}
-
